@@ -15,3 +15,4 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./dtos/create-address.dto"), exports);
+__exportStar(require("./dtos/update-address.dto"), exports);
