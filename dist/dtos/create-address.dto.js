@@ -9,61 +9,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateAddressDto = void 0;
+exports.CreateAddressDto = exports.AddressType = void 0;
 const class_validator_1 = require("class-validator");
-const class_transformer_1 = require("class-transformer");
+var AddressType;
+(function (AddressType) {
+    AddressType["HOME"] = "HOME";
+    AddressType["WORK"] = "WORK";
+    AddressType["OTHER"] = "OTHER";
+})(AddressType || (exports.AddressType = AddressType = {}));
 class CreateAddressDto {
+    constructor() {
+        this.type = AddressType.HOME;
+        this.isDefault = false;
+    }
 }
 exports.CreateAddressDto = CreateAddressDto;
 __decorate([
-    (0, class_validator_1.IsNotEmpty)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value.trim()),
+    (0, class_validator_1.IsUUID)(),
     __metadata("design:type", String)
-], CreateAddressDto.prototype, "street", void 0);
+], CreateAddressDto.prototype, "userId", void 0);
 __decorate([
-    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], CreateAddressDto.prototype, "latitude", void 0);
+__decorate([
+    (0, class_validator_1.IsNumber)(),
+    __metadata("design:type", Number)
+], CreateAddressDto.prototype, "longitude", void 0);
+__decorate([
     (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value.trim()),
+    __metadata("design:type", String)
+], CreateAddressDto.prototype, "address", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateAddressDto.prototype, "addressDetails", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateAddressDto.prototype, "references", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsEnum)(AddressType),
+    __metadata("design:type", String)
+], CreateAddressDto.prototype, "type", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateAddressDto.prototype, "country", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateAddressDto.prototype, "city", void 0);
 __decorate([
-    (0, class_validator_1.IsNotEmpty)(),
     (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value.trim()),
     __metadata("design:type", String)
 ], CreateAddressDto.prototype, "state", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsPostalCode)('any', { message: 'Invalid postal code' }),
-    (0, class_transformer_1.Transform)(({ value }) => value?.trim()),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateAddressDto.prototype, "postalCode", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value?.trim()),
     __metadata("design:type", String)
-], CreateAddressDto.prototype, "country", void 0);
+], CreateAddressDto.prototype, "imageUrl", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
-    (0, class_transformer_1.Transform)(({ value }) => value?.trim()),
-    __metadata("design:type", String)
-], CreateAddressDto.prototype, "references", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_transformer_1.Type)(() => Number),
-    (0, class_validator_1.IsNumber)({}, { message: 'Latitude must be a number' }),
-    (0, class_validator_1.Min)(-90),
-    (0, class_validator_1.Max)(90),
-    __metadata("design:type", Number)
-], CreateAddressDto.prototype, "latitude", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_transformer_1.Type)(() => Number),
-    (0, class_validator_1.IsNumber)({}, { message: 'Longitude must be a number' }),
-    (0, class_validator_1.Min)(-180),
-    (0, class_validator_1.Max)(180),
-    __metadata("design:type", Number)
-], CreateAddressDto.prototype, "longitude", void 0);
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], CreateAddressDto.prototype, "isDefault", void 0);

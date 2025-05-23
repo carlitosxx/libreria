@@ -1,56 +1,55 @@
-import {
-    IsNotEmpty,
-    IsOptional,
-    IsString,
-    IsPostalCode,
-    IsNumber,
-    Min,
-    Max,
-} from 'class-validator';
-import { Transform, Type } from 'class-transformer';
+import { IsUUID, IsString, IsNumber, IsOptional, IsEnum, IsBoolean, IsDate } from 'class-validator';
+import { Type } from 'class-transformer';
+
+export enum AddressType {
+    HOME = 'HOME',
+    WORK = 'WORK',
+    OTHER = 'OTHER',
+}
 
 export class CreateAddressDto {
-    @IsNotEmpty()
-    @IsString()
-    @Transform(({ value }) => value.trim())
-    street: string;
+    @IsUUID()
+    userId: string;
 
-    @IsNotEmpty()
+    @IsNumber()
+    latitude: number;
+
+    @IsNumber()
+    longitude: number;
+
     @IsString()
-    @Transform(({ value }) => value.trim())
+    address: string;
+
+    @IsOptional()
+    @IsString()
+    addressDetails?: string;
+
+    @IsOptional()
+    @IsString()
+    references?: string;
+
+    @IsOptional()
+    @IsEnum(AddressType)
+    type?: AddressType = AddressType.HOME;
+
+    @IsString()
+    country: string;
+
+    @IsString()
     city: string;
 
-    @IsNotEmpty()
     @IsString()
-    @Transform(({ value }) => value.trim())
     state: string;
 
     @IsOptional()
-    @IsPostalCode('any', { message: 'Invalid postal code' })
-    @Transform(({ value }) => value?.trim())
+    @IsString()
     postalCode?: string;
 
     @IsOptional()
     @IsString()
-    @Transform(({ value }) => value?.trim())
-    country?: string;
+    imageUrl?: string;
 
     @IsOptional()
-    @IsString()
-    @Transform(({ value }) => value?.trim())
-    references?: string;
-
-    @IsOptional()
-    @Type(() => Number)
-    @IsNumber({}, { message: 'Latitude must be a number' })
-    @Min(-90)
-    @Max(90)
-    latitude?: number;
-
-    @IsOptional()
-    @Type(() => Number)
-    @IsNumber({}, { message: 'Longitude must be a number' })
-    @Min(-180)
-    @Max(180)
-    longitude?: number;
+    @IsBoolean()
+    isDefault?: boolean = false;
 }

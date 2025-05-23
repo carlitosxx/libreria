@@ -93,6 +93,15 @@ libphonenumber-js@^1.11.1:
   resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.12.8.tgz#20e5b57f24e60359d795e2fa2ee185776331e34f"
   integrity sha512-f1KakiQJa9tdc7w1phC2ST+DyxWimy9c3g3yeF+84QtEanJr2K77wAmBPP22riU05xldniHsvXuflnLZ4oysqA==
 
+"librerias@https://github.com/carlitosxx/libreria.git":
+  version "1.0.0"
+  resolved "https://github.com/carlitosxx/libreria.git#b775ef94724284338cf4fa5506e0de394645eaf9"
+  dependencies:
+    "@nestjs/common" "^11.1.1"
+    "@nestjs/mapped-types" "^2.1.0"
+    class-transformer "^0.5.1"
+    class-validator "^0.14.2"
+
 load-esm@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/load-esm/-/load-esm-1.0.2.tgz#35dbac8a1a3abdb802cf236008048fcc8a9289a6"

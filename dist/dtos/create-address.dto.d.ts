@@ -1,10 +1,20 @@
+export declare enum AddressType {
+    HOME = "HOME",
+    WORK = "WORK",
+    OTHER = "OTHER"
+}
 export declare class CreateAddressDto {
-    street: string;
+    userId: string;
+    latitude: number;
+    longitude: number;
+    address: string;
+    addressDetails?: string;
+    references?: string;
+    type?: AddressType;
+    country: string;
     city: string;
     state: string;
     postalCode?: string;
-    country?: string;
-    references?: string;
-    latitude?: number;
-    longitude?: number;
+    imageUrl?: string;
+    isDefault?: boolean;
 }
