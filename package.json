@@ -4,18 +4,22 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "peerDependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2"
+  },
   "dependencies": {
     "@nestjs/common": "^11.1.1",
     "@nestjs/mapped-types": "^2.1.0",
     "@nestjs/microservices": "^11.1.1",
-    "@prisma/client": "^6.8.2",
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.2"
+    "@prisma/client": "^6.8.2"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
   "devDependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
     "typescript": "^5.8.3"
   }
 }
