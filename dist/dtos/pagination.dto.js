@@ -20,6 +20,7 @@ class PaginationDto {
 }
 exports.PaginationDto = PaginationDto;
 __decorate([
+    (0, class_transformer_1.Transform)(({ value }) => (!!value ? Number(value) : undefined)),
     (0, class_validator_1.IsOptional)(),
     (0, class_transformer_1.Type)(() => Number),
     (0, class_validator_1.IsPositive)(),
@@ -27,6 +28,7 @@ __decorate([
     __metadata("design:type", Number)
 ], PaginationDto.prototype, "page", void 0);
 __decorate([
+    (0, class_transformer_1.Transform)(({ value }) => (!!value ? Number(value) : undefined)),
     (0, class_validator_1.IsOptional)(),
     (0, class_transformer_1.Type)(() => Number),
     (0, class_validator_1.IsPositive)(),
