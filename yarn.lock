@@ -23,6 +23,19 @@
   resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-2.1.0.tgz#b9b536b7c3571567aa1d0223db8baa1a51505a19"
   integrity sha512-W+n+rM69XsFdwORF11UqJahn4J3xi4g/ZEOlJNL6KoW5ygWSmBB2p0S2BZ4FQeS/NDH72e6xIcu35SfJnE8bXw==
 
+"@nestjs/microservices@^11.1.1":
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-11.1.1.tgz#2775958424ddd77e96ed558a0dfb0792a41f2934"
+  integrity sha512-hmMVd/VmP/5GHsAHPF8NJArDjRRsSCBR6DnpvX6LbNykZoPWh5I2TxFAqTcJeZqZU/MtVgMb9uxljnzTM3/SKw==
+  dependencies:
+    iterare "1.2.1"
+    tslib "2.8.1"
+
+"@prisma/client@^6.8.2":
+  version "6.8.2"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-6.8.2.tgz#f0af46643604cd38341f285483edc3c3ae7e6651"
+  integrity sha512-5II+vbyzv4si6Yunwgkj0qT/iY0zyspttoDrL3R4BYgLdp42/d2C8xdi9vqkrYtKt9H32oFIukvyw3Koz5JoDg==
+
 "@tokenizer/inflate@^0.2.6":
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/@tokenizer/inflate/-/inflate-0.2.7.tgz#32dd9dfc9abe457c89b3d9b760fc0690c85a103b"
@@ -92,15 +105,6 @@ libphonenumber-js@^1.11.1:
   version "1.12.8"
   resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.12.8.tgz#20e5b57f24e60359d795e2fa2ee185776331e34f"
   integrity sha512-f1KakiQJa9tdc7w1phC2ST+DyxWimy9c3g3yeF+84QtEanJr2K77wAmBPP22riU05xldniHsvXuflnLZ4oysqA==
-
-"librerias@https://github.com/carlitosxx/libreria.git":
-  version "1.0.0"
-  resolved "https://github.com/carlitosxx/libreria.git#b775ef94724284338cf4fa5506e0de394645eaf9"
-  dependencies:
-    "@nestjs/common" "^11.1.1"
-    "@nestjs/mapped-types" "^2.1.0"
-    class-transformer "^0.5.1"
-    class-validator "^0.14.2"
 
 load-esm@1.0.2:
   version "1.0.2"
