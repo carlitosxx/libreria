@@ -52,4 +52,8 @@ export class CreateAddressDto {
     @IsOptional()
     @IsBoolean()
     isDefault?: boolean = false;
+
+    @IsOptional()
+    @IsBoolean()
+    isDeleted?: boolean = false;
 }

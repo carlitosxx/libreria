@@ -17,4 +17,5 @@ export declare class CreateAddressDto {
     postalCode?: string;
     imageUrl?: string;
     isDefault?: boolean;
+    isDeleted?: boolean;
 }

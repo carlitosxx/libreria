@@ -21,6 +21,7 @@ class CreateAddressDto {
     constructor() {
         this.type = AddressType.HOME;
         this.isDefault = false;
+        this.isDeleted = false;
     }
 }
 exports.CreateAddressDto = CreateAddressDto;
@@ -82,3 +83,8 @@ __decorate([
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
 ], CreateAddressDto.prototype, "isDefault", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsBoolean)(),
+    __metadata("design:type", Boolean)
+], CreateAddressDto.prototype, "isDeleted", void 0);
